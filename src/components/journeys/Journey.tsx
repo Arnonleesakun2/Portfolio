@@ -11,10 +11,10 @@ const Journey = () => {
           {experince.map((item, index) => {
             return (
               <div key={index} className="p-4 rounded-lg">
-                <div className="font-thai text-[22px] text-black/90 leading-[25px] font-semibold">
+                <div className="font-thai text-[22px] leading-[25px] font-semibold">
                   {item.position}
                 </div>
-                <div className="font-thai text-[20px] mt-1 text-black/60 leading-[25px] font-medium">
+                <div className="font-thai text-[20px] mt-1leading-[25px] font-medium">
                   {item.company}
                 </div>
                 <div className="mt-3">
@@ -22,7 +22,7 @@ const Journey = () => {
                     return (
                       <div
                         key={index}
-                        className="font-thai mt-2 text-[17px] leading-[23px] text-black/60"
+                        className="font-thai mt-2 text-[17px] leading-[23px]"
                       >
                         • {des}
                       </div>
@@ -50,10 +50,10 @@ const Journey = () => {
                   key={index}
                   className="p-4 rounded-lg"
                 >
-                  <div className="font-thai text-[22px] leading-[25px] font-semibold text-black/90">
+                  <div className="font-thai text-[22px] leading-[25px] font-semibold">
                     {item.title}
                   </div>
-                  <div className="font-thai text-[16px] mt-2 leading-[25px] text-black/60">
+                  <div className="font-thai text-[16px] mt-2 leading-[25px]">
                     {item.des}
                   </div>
                   <div className="font-thai text-[16px] mt-2 leading-[20px] text-pink-400">

@@ -13,7 +13,7 @@ const About = () => {
           Hello I am
           <span className="text-highlight"> Pop!</span>
         </div>
-        <div className="font-thai text-[19px] font-medium leading-relaxed text-gray-700 max-w-[600px]">
+        <div className="font-thai text-[19px] font-medium leading-relaxed max-w-[600px]">
           ผมเป็นจบใหม่สนใจในการทำเว็บไซต์ในสายงาน
           <span className="text-highlight"> Fullstack Developer </span>
           งานในด้าน <span className="text-highlight">Frontend</span> และ
@@ -100,7 +100,7 @@ const About = () => {
           <div className="animate-bounce absolute z-10 right-0 top-[300px] font-shortstack py-3 px-5 bg-black text-white rounded-full shadow-lg">
             Thailand
           </div>
-          <div className="absolute top-[230px] z-0 text-[120px] font-extrabold leading-[120px] text-gray-50/50">
+          <div className="absolute top-[230px] z-0 text-[130px] font-extrabold leading-[120px]">
             <div className="">RESUME</div>
             <div className="">RESUME</div>
             <div className="">RESUME</div>

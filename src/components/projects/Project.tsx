@@ -43,7 +43,7 @@ const Project = () => {
                         {item.icon.map((icon, index) => (
                           <div
                             key={index}
-                            className="flex items-center gap-1.5 bg-black px-3 py-1.5 rounded-full text-white hover:bg-black/80 transition-colors duration-300"
+                            className="flex items-center gap-1.5 btn-neutral btn rounded-full text-white hover:bg-black/80 transition-colors duration-300"
                           >
                             <span className="text-lg">{icon}</span>
                           </div>
@@ -54,10 +54,10 @@ const Project = () => {
                       {item.des.map((des, index) => (
                         <div
                           key={index}
-                          className="font-thai text-white/80 flex items-start gap-2"
+                          className="font-thai flex items-start gap-2"
                         >
                           <span className="text-yellow-400 mt-1">•</span>
-                          <span className="text-black/70">{des}</span>
+                          {des}
                         </div>
                       ))}
                     </div>
