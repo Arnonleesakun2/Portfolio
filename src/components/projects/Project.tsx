@@ -15,15 +15,13 @@ const Project = () => {
               className="hover:border-pink-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-pink-500/20 rounded-4xl border border-black/10"
             >
               <div className="p-6">
-                <div className="sm:flex gap-6">
-                  <div className="sm:w-[30%] mb-4 sm:mb-0">
+                <div className="lg:grid lg:grid-cols-6 gap-6">
+                  <div className="mb-4 sm:mb-0 col-span-2">
                     {item.image ? (
                       <Image
                         src={item.image}
                         alt="Project"
-                        width={300}
-                        height={400}
-                        className="rounded-xl"
+                        className="rounded-xl w-full h-[200px]"
                       />
                     ) : (
                       <div className="w-[300px] h-[400px] flex justify-center items-center">
@@ -31,7 +29,7 @@ const Project = () => {
                       </div>
                     )}
                   </div>
-                  <div className="sm:w-[65%] space-y-4">
+                  <div className="space-y-4 col-span-4">
                     <h3 className="text-highlight text-2xl font-semibold border-b border-white/10 pb-3">
                       {item.title}
                     </h3>

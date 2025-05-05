@@ -100,11 +100,6 @@ const About = () => {
           <div className="animate-bounce absolute z-10 right-0 top-[300px] font-shortstack py-3 px-5 bg-black text-white rounded-full shadow-lg">
             Thailand
           </div>
-          <div className="absolute top-[230px] z-0 text-[130px] font-extrabold leading-[120px]">
-            <div className="">RESUME</div>
-            <div className="">RESUME</div>
-            <div className="">RESUME</div>
-          </div>
         </div>
       </div>
     </div>
