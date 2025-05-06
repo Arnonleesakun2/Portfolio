@@ -23,7 +23,6 @@ import carplan from "../../public/img/carplan.png";
 import camping from "../../public/img/camping.png";
 import social from "../../public/img/social.png";
 import blog from "../../public/img/simpleblog.png";
-import employee from "../../public/img/employee.png";
 import chatassitance from "../../public/img/chatassitance.png";
 import ecom from "../../public/img/ecom.png";
 
@@ -151,25 +150,6 @@ export const project = [
       "ระบบ้ใช้และการ ตนด้วย Clerk",
     ].map((item, index) => <span key={`blog-des-${index}`}>{item}</span>),
     github: ["https://github.com/Arnonleesakun2/Project-SimpleBlog"],
-  },
-  {
-    image: employee,
-    title: "EMPLOYEE MANAGEMENT SYSTEM",
-    icon: [
-      <FaReact key="react" />,
-      <SiShadcnui key="shadcn" />,
-      <RiTailwindCssFill key="tailwind" />,
-      <FaNodeJs key="nodejs" />,
-      <SiExpress key="express" />,
-      <RiSupabaseFill key="supabase" />,
-      <SiPostgresql key="postgresql" />,
-    ],
-    des: [
-      "ฟีเจอร์ สร้าง, แก้ไข, และลบข้อมูล,คำนวณ,สร้างรายงาน",
-      "โปรเจกต์ช่วย ด้านการทำงานข้อมูลหลายประเภท การออกแบบฟอร์ม และการประมวลผลข้อมูลผลใน",
-    ].map((item, index) => <span key={`employee-des-${index}`}>{item}</span>),
-    demo: "https://employeemn.netlify.app/",
-    github: ["https://github.com/Arnonleesakun2/Employee-Management-System"],
   },
   {
     image: chatassitance,

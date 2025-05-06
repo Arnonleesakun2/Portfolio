@@ -76,9 +76,11 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-neutral font-semibold rounded-4xl">
-            Admin
-          </button>
+          <Link href="/sign-in">
+            <button className="btn btn-neutral font-semibold rounded-4xl">
+              Admin
+            </button>
+          </Link>
         </div>
       </div>
     </div>

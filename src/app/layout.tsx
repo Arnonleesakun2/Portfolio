@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbars/Navbar";
-import Themechange from "@/components/themes/Themechange";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { ToastProvider } from "@/context/ToastContext";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -26,16 +14,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="cupcake">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="maincontainer">
-          <Navbar />
+      <body suppressHydrationWarning={true}>
+        <ToastProvider>
           {children}
-        </div>
-        <Themechange />
+        </ToastProvider>
       </body>
     </html>
   );
 }
+
+
+
+
 

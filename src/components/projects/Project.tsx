@@ -6,7 +6,7 @@ import React from "react";
 const Project = () => {
   return (
     <div className="mt-[100px]">
-      <div className="text-4xl text-highlight font-semibold ">Projects</div>
+      <div className="text-4xl text-highlight font-semibold">Projects</div>
       <div className="space-y-[30px] mt-5">
         {project.map((item, index) => {
           return (
