@@ -4,7 +4,7 @@
   themes: all;
 }
 @layer utilities {
-  :where([data-theme="cupcake"]) .theme-border {
+  :where([data-theme="nord"]) .theme-border {
     border-color: rgb(0 0 0 / 0.1); /* border-black/10 */
   }
 

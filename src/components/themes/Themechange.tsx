@@ -6,7 +6,7 @@ const Themechange = () => {
   const toggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
     const html = document.querySelector("html");
     if (html) {
-      html.setAttribute("data-theme", e.target.checked ? "black" : "cupcake");
+      html.setAttribute("data-theme", e.target.checked ? "black" : "nord");
     }
   };
   useEffect(() => {

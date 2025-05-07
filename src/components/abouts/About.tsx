@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import profile from "../../../public/img/profiles.png";
-import { contact } from "@/utils/contact";
 import Image from "next/image";
-import { Link2 } from "lucide-react";
+import { profile as profileData } from "@/utils/profile";
 
 const About = () => {
   return (
@@ -18,10 +17,10 @@ const About = () => {
           <span className="text-highlight"> Fullstack Developer </span>
           งานในด้าน <span className="text-highlight">Frontend</span> และ
           <span className="text-highlight"> Backend </span>
-          ผมมีความตั้งใจที่จะเรียนรู้สิ่งใหม่ ๆ
-          และพร้อมที่จะพัฒนาทักษะอย่างต่อเนื่อง
-          เพื่อให้สามารถสร้างสรรค์ผลงานที่มีคุณภาพ
-          และเติบโตไปพร้อมกับทีมในงานที่ท้าทายครับ!
+          ผมตั้งใจจะสร้างผลงานใหม่ ๆ
+          และพร้อมอย่างต่อเนื่อง
+          เลือกให้สามารถสร้างสรรค์ผลงาน
+          และไปพร้อมในงานท้าทาย!
         </div>
         <div className="flex gap-4 pt-4">
           <Link
@@ -59,33 +58,20 @@ const About = () => {
                   className="object-cover object-center"
                 />
               </div>
-              <div className="bg-black">
-                <div className="py-6 px-8">
-                  <div className="text-[40px] text-white font-semibold mb-4">
-                    Contact...
+              <div className="bg-gradient-to-br from-black to-gray-900 rounded-b-xl">
+                <div className="py-8 px-8">
+                  <div className="text-[40px] font-bold mb-6 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent flex items-center gap-3">
+                    <span>Profile</span>
+                    <div className="h-1 flex-grow bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full"></div>
                   </div>
-                  <div className="space-y-4">
-                    {contact.map((item, index) => {
+                  <div className="text-amber-50 space-y-2">
+                    {profileData.map((item, index) => {
                       return (
-                        <div
-                          key={index}
-                          className="font-shortstack flex items-center gap-3 text-white"
-                        >
-                          <div className="text-pink-400">{item.icon}</div>
-                          {item.link ? (
-                            <div className="flex items-center gap-1 hover:translate-x-1 duration-300">
-                              <Link
-                                target="_blank"
-                                href={item.link}
-                                className="hover:text-pink-400 transition-colors"
-                              >
-                                {item.data}
-                              </Link>
-                              <Link2 className="text-pink-400" />
-                            </div>
-                          ) : (
-                            <span className="">{item.data}</span>
-                          )}
+                        <div key={index} className="group flex items-center transition-all hover:translate-x-2 duration-300 border-b border-gray-700/50 hover:border-pink-500/70">
+                          <span className="text-white font-semibold min-w-[100px] bg-gradient-to-r from-pink-500/80 to-yellow-500/80 px-2 py-1 rounded-lg mr-4 shadow-md group-hover:shadow-pink-500/30 transition-all">
+                            {item.title}
+                          </span>
+                          <span className="text-white font-medium text-lg group-hover:text-pink-200 transition-colors duration-300">{item.data}</span>
                         </div>
                       );
                     })}

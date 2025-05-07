@@ -12,7 +12,7 @@ const Project = () => {
           return (
             <div
               key={index}
-              className="hover:border-pink-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-pink-500/20 rounded-4xl border border-black/10"
+              className="border theme-border hover:border-pink-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-pink-500/20 rounded-4xl"
             >
               <div className="p-6">
                 <div className="lg:grid lg:grid-cols-6 gap-6">
