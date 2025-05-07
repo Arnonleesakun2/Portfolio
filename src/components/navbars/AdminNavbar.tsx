@@ -52,7 +52,7 @@ const AdminNavbar = () => {
           <ul className="menu menu-horizontal px-1">
             <li>
               <Link
-                href="/blog"
+                href="/admin/blog"
                 className="rounded-4xl font-semibold btn-ghost"
               >
                 Blogs
@@ -60,18 +60,10 @@ const AdminNavbar = () => {
             </li>
             <li>
               <Link
-                href="/todo"
+                href="/admin/todo"
                 className="rounded-4xl font-semibold btn-ghost"
               >
                 Todos
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="rounded-4xl font-semibold btn-ghost"
-              >
-                Contact us
               </Link>
             </li>
           </ul>
