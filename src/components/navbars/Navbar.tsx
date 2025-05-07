@@ -35,7 +35,7 @@ const Navbar = () => {
                 <Link href="/todo">Todos</Link>
               </li>
               <li>
-                <Link href="/contact">Contact us</Link>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                 href="/contact"
                 className="rounded-4xl font-semibold btn-ghost"
               >
-                Contact us
+                Contact
               </Link>
             </li>
           </ul>

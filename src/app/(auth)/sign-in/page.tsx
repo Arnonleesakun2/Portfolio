@@ -31,11 +31,12 @@ const LoginPage = () => {
     resolver: zodResolver(userSchema),
   });
 
-  const onSubmit = async (data: User) => {
+  const hdlSubmit = async (data: User) => {
     try {
+      await new Promise((resoLve) => setTimeout(resoLve, 1000));
       const res = await loginUser(data);
       if (res && res.status === 200) {
-        showToast("Login successful!", "success");
+        showToast(res.data.message, "success");
         router.push("/admin/dashboard");
       }
     } catch (error) {
@@ -51,7 +52,7 @@ const LoginPage = () => {
             Login
           </h2>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(hdlSubmit)}>
             <div className="flex flex-col gap-3">
               <Input
                 control={control}

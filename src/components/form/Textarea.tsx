@@ -14,13 +14,13 @@ type InputProps<T extends FieldValues> = {
   type: string;
   defaultValue?: string;
 };
-const Input = <T extends FieldValues>({
+
+const Textarea = <T extends FieldValues>({
   name,
   errors,
   control,
   label,
   type,
-  defaultValue,
 }: InputProps<T>) => {
   return (
     <div className="">
@@ -30,15 +30,14 @@ const Input = <T extends FieldValues>({
         render={({ field }) => (
           <label className="floating-label">
             <span>{label}</span>
-            <input
-              {...field}
-              value={defaultValue}
-              type={type}
+            <textarea
+              typeof={type}
               placeholder={label}
-              className={`input input-md rounded-4xl w-full ${
+              {...field}
+              className={`textarea rounded-4xl w-full h-[150px] ${
                 errors[name] ? "border-red-400 focus:border-red-500" : ""
               }`}
-            />
+            ></textarea>
           </label>
         )}
       />
@@ -50,4 +49,4 @@ const Input = <T extends FieldValues>({
     </div>
   );
 };
-export default Input;
+export default Textarea;

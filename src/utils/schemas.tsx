@@ -17,5 +17,18 @@ export const userSchema = z.object({
     }),
 });
 
-// Type inference ทันที
+export const contactSchema = z.object({
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  title: z
+    .string()
+    .min(3, { message: "Subject must be at least 3 characters long" })
+    .max(100, { message: "Subject must be at most 100 characters long" }),
+  description: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters long" })
+    .max(1000, { message: "Message must be at most 1000 characters long" }),
+});
+
+// Type inference
 // type FormData = z.infer<typeof userSchema>;
+// type ContactFormData = z.infer<typeof contactSchema>;
