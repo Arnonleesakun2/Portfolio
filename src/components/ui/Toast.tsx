@@ -35,7 +35,7 @@ const Toast = ({
 
   if (!isVisible) return null;
   return createPortal(
-    <div className="toast toast-top toast-end z-50">
+    <div className="toast toast-buttom toast-start z-50">
       <div className={`alert ${alertClass} shadow-lg`}>
         <div className="flex items-center gap-1">
           {type === "success" && (

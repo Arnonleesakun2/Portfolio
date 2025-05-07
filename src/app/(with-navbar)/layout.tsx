@@ -1,4 +1,4 @@
-import Navbar from "@/components/navbars/Navbar";
+import NavbarContainer from "@/components/navbars/NavbarContainer";
 import Themechange from "@/components/themes/Themechange";
 
 export default function WithNavbarLayout({
@@ -8,7 +8,7 @@ export default function WithNavbarLayout({
 }) {
   return (
     <div className="maincontainer">
-      <Navbar />
+      <NavbarContainer/>
       {children}
       <Themechange />
     </div>
