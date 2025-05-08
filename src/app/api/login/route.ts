@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
-import prisma from "@/lip/db/connectDB";
+import prisma from "@/lip/connectDB";
 
 const JWT_SECRET = process.env.NEXT_PUBLIC_JWT_SECRET || "test";
 
@@ -22,17 +22,11 @@ export async function POST(request: NextRequest) {
       },
     });
     if (!user) {
-      return NextResponse.json(
-        { error: "Invalid username " },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Invalid username " }, { status: 401 });
     }
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return NextResponse.json(
-        { error: "Invalid  password" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Invalid  password" }, { status: 401 });
     }
     const payload = {
       username: user.username,
@@ -57,9 +51,6 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error("Login error:", error);
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+    return NextResponse.json(error, { status: 500 });
   }
 }

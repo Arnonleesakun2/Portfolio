@@ -34,7 +34,7 @@ const Textarea = <T extends FieldValues>({
               typeof={type}
               placeholder={label}
               {...field}
-              className={`textarea rounded-4xl w-full h-[150px] ${
+              className={`textarea z-1 rounded-4xl w-full h-[150px] ${
                 errors[name] ? "border-red-400 focus:border-red-500" : ""
               }`}
             ></textarea>

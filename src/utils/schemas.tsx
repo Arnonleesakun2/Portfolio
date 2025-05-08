@@ -28,7 +28,29 @@ export const contactSchema = z.object({
     .min(10, { message: "Message must be at least 10 characters long" })
     .max(1000, { message: "Message must be at most 1000 characters long" }),
 });
+const validateImage = () =>
+  z
+    .instanceof(File, { message: "Image is required" }) 
+    .refine(
+      (file) => file.size <= 5024 * 5024,
+      "File size must be less than 5MB"
+    );
 
+export const blogSchema = z.object({
+  title: z
+    .string()
+    .min(3, { message: "Title must be at least 3 characters" })
+    .max(100),
+  summary: z
+    .string()
+    .min(10, { message: "Summary must be at least 10 characters" })
+    .max(300),
+  content: z
+    .string()
+    .min(50, { message: "Content must be at least 50 characters" }),
+  category: z.string().min(1, { message: "Category is required" }),
+  image: validateImage(),
+});
 // Type inference
 // type FormData = z.infer<typeof userSchema>;
 // type ContactFormData = z.infer<typeof contactSchema>;

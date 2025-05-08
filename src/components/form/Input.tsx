@@ -35,7 +35,7 @@ const Input = <T extends FieldValues>({
               value={defaultValue}
               type={type}
               placeholder={label}
-              className={`input input-md rounded-4xl w-full ${
+              className={`input z-1 input-md rounded-4xl w-full ${
                 errors[name] ? "border-red-400 focus:border-red-500" : ""
               }`}
             />
