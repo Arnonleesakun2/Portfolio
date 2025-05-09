@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: "Admin panel for managing blog RyeSPortfolio",
 };
 
-
 const BlogAdminPage = async () => {
   return (
     <div className="mt-20">
@@ -15,7 +14,9 @@ const BlogAdminPage = async () => {
         <h1 className="text-4xl font-bold text-highlight">Manage Blogs</h1>
         <Formblog />
       </div>
-      <Tableblog/>
+      <div className="my-8">
+        <Tableblog />
+      </div>
     </div>
   );
 };

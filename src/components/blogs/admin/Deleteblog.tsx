@@ -7,7 +7,7 @@ import { useState } from "react";
 import { getAxiosErrorMessage } from "@/utils/handleAxiosError";
 
 type DeleteblogProps = {
-  id: number;
+  id: string;
 };
 
 const Deleteblog = ({ id }: DeleteblogProps) => {

@@ -31,7 +31,7 @@ export const getBlogs = async () => {
   return res.json();
 };
 
-export const deleteBlog = async (id: number) => {
+export const deleteBlog = async (id: string) => {
   const res = await axios.delete(`${API_URL}/api/blogs/${id}`);
   return res;
 };

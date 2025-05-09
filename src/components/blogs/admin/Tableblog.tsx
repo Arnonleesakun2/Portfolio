@@ -1,12 +1,12 @@
 import { getBlogs } from "@/services/blogService";
-import { Eye } from "lucide-react";
-import Link from "next/link";
 import Deleteblog from "./Deleteblog";
+import ViewBlogButton from "./ViewBlogButton";
 
 type Blog = {
-  id: number;
+  id: string;
   title: string;
   summary: string;
+  content: string;
   category: string;
   image: string;
   createdAt: string;
@@ -53,9 +53,7 @@ const Tableblog = async () => {
               <td className="p-4">{blog.category}</td>
               <td className="p-4">{formatDate(blog.createdAt)}</td>
               <td className="p-4 space-x-2">
-                <Link href={`/blogs/${blog.id}`}>
-                  <Eye className="inline w-5 h-5 text-blue-500 hover:text-blue-700" />
-                </Link>
+                <ViewBlogButton blog={blog} />
                 <Deleteblog id={blog.id} />
               </td>
             </tr>
