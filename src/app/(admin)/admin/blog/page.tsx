@@ -7,12 +7,11 @@ export const metadata: Metadata = {
   description: "Admin panel for managing blog RyeSPortfolio",
 };
 
-export const dynamic = 'force-dynamic';
 
 const BlogAdminPage = async () => {
   return (
     <div className="mt-20">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-2">
         <h1 className="text-4xl font-bold text-highlight">Manage Blogs</h1>
         <Formblog />
       </div>

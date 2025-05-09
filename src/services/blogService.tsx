@@ -16,7 +16,7 @@ export const storeBlog = async (data: Blogs) => {
   formData.append("content", data.content);
   formData.append("category", data.category);
   formData.append("image", data.image);
-  
+
   return await axios.post(`${API_URL}/api/blogs`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
@@ -25,8 +25,10 @@ export const storeBlog = async (data: Blogs) => {
 };
 
 export const getBlogs = async () => {
-  const res = await axios.get(`${API_URL}/api/blogs`);
-  return res.data;
+  const res = await fetch(`${API_URL}/api/blogs`, {
+    cache: "no-store",
+  });
+  return res.json();
 };
 
 export const deleteBlog = async (id: number) => {
