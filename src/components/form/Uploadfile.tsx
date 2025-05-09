@@ -62,6 +62,8 @@ const Uploadfile = <T extends FieldValues>({
             {imagePreview ? (
               <div className="space-y-4">
                 <Image
+                  width={200}
+                  height={200}
                   src={imagePreview}
                   alt="Preview"
                   className="max-h-60 mx-auto rounded-lg object-cover"

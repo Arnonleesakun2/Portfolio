@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ToastProvider } from "@/context/ToastContext";
+import ReduxProvider from "@/context/ReduxProvider";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Arnon leesakun portfolio",
+  description: "RyeS Portfolio",
 };
 
 export default function RootLayout({
@@ -15,15 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="nord">
       <body suppressHydrationWarning={true}>
-        <ToastProvider>
-          {children}
-        </ToastProvider>
+        <ReduxProvider>
+          <ToastProvider>{children}</ToastProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
 }
-
-
-
-
-

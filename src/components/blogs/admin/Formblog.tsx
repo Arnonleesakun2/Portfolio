@@ -12,10 +12,12 @@ import { z } from "zod";
 import { storeBlog } from "@/services/blogService";
 import { useToast } from "@/context/ToastContext";
 import { getAxiosErrorMessage } from "@/utils/handleAxiosError";
+import { useRouter } from "next/navigation";
 
 type BlogFormData = z.infer<typeof blogSchema>;
 
 const Formblog = () => {
+  const router = useRouter();
   const [uploadKey, setUploadKey] = useState(0);
   const { showToast } = useToast();
   const modalRef = useRef<HTMLDialogElement>(null);
@@ -49,6 +51,7 @@ const Formblog = () => {
       if (res && res.status === 201) {
         showToast(res.data.message, "success");
         closeModal();
+        router.refresh();
       }
     } catch (error) {
       showToast(getAxiosErrorMessage(error), "error");
