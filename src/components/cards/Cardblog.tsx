@@ -29,7 +29,7 @@ const Cardblog = ({
   };
 
   return (
-    <div className="card sm:card-side shadow-xl overflow-hidden border theme-border hover:shadow-2xl transition-all duration-300 h-full">
+    <div className="card sm:card-side rounded-4xl shadow-xl overflow-hidden border theme-border hover:shadow-2xl transition-all duration-300 h-full">
       <figure className="sm:hidden w-full md:w-1/3 aspect-[4/3] relative">
         <Image
           src={image}
@@ -48,7 +48,7 @@ const Cardblog = ({
               <Tag size={14} />
               {category}
             </div>
-            <div className="text-xs text-gray-500 flex items-center gap-1">
+            <div className="text-xs flex items-center gap-1">
               <Calendar size={14} />
               {formatDate(createdAt)}
             </div>
@@ -56,7 +56,7 @@ const Cardblog = ({
           <h2 className="card-title text-xl font-bold hover:text-primary transition-colors">
             {title.length > 50 ? `${title.substring(0, 50)}...` : title}
           </h2>
-          <p className="text-gray-600 mt-2 line-clamp-3">{summary}</p>
+          <p className=" mt-2 line-clamp-3">{summary}</p>
         </div>
         <div className="card-actions justify-end mt-4">
           <Link
