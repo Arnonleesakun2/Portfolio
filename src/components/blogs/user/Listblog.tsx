@@ -26,7 +26,7 @@ const Listblog = async () => {
   }
 
   return (
-    <div className="py-10 space-y-10 w-[70%] mx-auto">
+    <div className="py-10 space-y-10 md:w-[70%] mx-auto">
       {blogs.map((blog: Blog) => (
         <Cardblog key={blog.id} {...blog} />
       ))}
