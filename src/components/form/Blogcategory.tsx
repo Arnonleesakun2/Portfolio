@@ -5,6 +5,7 @@ import {
   FieldValues,
   Path,
 } from "react-hook-form";
+import { categories } from "@/utils/category";
 
 type InputProps<T extends FieldValues> = {
   control: Control<T>;
@@ -17,20 +18,6 @@ const Blogcategory = <T extends FieldValues>({
   control,
   errors,
 }: InputProps<T>) => {
-  const categories = [
-    "Technology",
-    "Programming",
-    "Web Development",
-    "Design",
-    "Personal",
-    "Other",
-    "Web Basics",
-    "Frontend Development",
-    "Backend Development",
-    "Fullstack & Frameworks",
-    "Database",
-  ];
-
   return (
     <div className="space-y-2">
       <Controller

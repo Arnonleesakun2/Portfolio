@@ -17,10 +17,8 @@ const About = () => {
           <span className="text-highlight"> Fullstack Developer </span>
           งานในด้าน <span className="text-highlight">Frontend</span> และ
           <span className="text-highlight"> Backend </span>
-          ผมตั้งใจจะสร้างผลงานใหม่ ๆ
-          และพร้อมอย่างต่อเนื่อง
-          เลือกให้สามารถสร้างสรรค์ผลงาน
-          และไปพร้อมในงานท้าทาย!
+          ผมตั้งใจจะสร้างผลงานใหม่ ๆ และพร้อมอย่างต่อเนื่อง
+          เลือกให้สามารถสร้างสรรค์ผลงาน และไปพร้อมในงานท้าทาย!
         </div>
         <div className="flex gap-4 pt-4">
           <Link
@@ -58,20 +56,25 @@ const About = () => {
                   className="object-cover object-center"
                 />
               </div>
-              <div className="bg-gradient-to-br from-black to-gray-900 rounded-b-xl">
+              <div className="border theme-border rounded-b-xl">
                 <div className="py-8 px-8">
                   <div className="text-[40px] font-bold mb-6 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent flex items-center gap-3">
                     <span>Profile</span>
                     <div className="h-1 flex-grow bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full"></div>
                   </div>
-                  <div className="text-amber-50 space-y-2">
+                  <div className="space-y-2">
                     {profileData.map((item, index) => {
                       return (
-                        <div key={index} className="group flex items-center transition-all hover:translate-x-2 duration-300 border-b border-gray-700/50 hover:border-pink-500/70">
+                        <div
+                          key={index}
+                          className="group flex items-center transition-all hover:translate-x-2 duration-300 border-b theme-border hover:border-pink-500/70"
+                        >
                           <span className="text-white font-semibold min-w-[100px] bg-gradient-to-r from-pink-500/80 to-yellow-500/80 px-2 py-1 rounded-lg mr-4 shadow-md group-hover:shadow-pink-500/30 transition-all">
                             {item.title}
                           </span>
-                          <span className="text-white font-medium text-lg group-hover:text-pink-200 transition-colors duration-300">{item.data}</span>
+                          <span className=" font-medium text-lg group-hover:text-pink-200 transition-colors duration-300">
+                            {item.data}
+                          </span>
                         </div>
                       );
                     })}

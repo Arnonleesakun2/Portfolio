@@ -34,9 +34,25 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const result = await prisma.blog.findMany();
+    const category = req.nextUrl.searchParams.get("category");
+    const search = req.nextUrl.searchParams.get("search");
+    const result = await prisma.blog.findMany({
+      where: {
+        AND: [
+          category ? { category } : {},
+          search
+            ? {
+                OR: [
+                  { title: { contains: search, mode: "insensitive" } },
+                ],
+              }
+            : {},
+        ],
+      },
+      orderBy: { createdAt: "desc" },
+    });
     return NextResponse.json(result, { status: 200 });
   } catch (error) {
     return NextResponse.json(error, { status: 500 });

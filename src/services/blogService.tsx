@@ -24,10 +24,15 @@ export const storeBlog = async (data: Blogs) => {
   });
 };
 
-export const getBlogs = async () => {
-  const res = await fetch(`${API_URL}/api/blogs`, {
+export const getBlogs = async (category?: string, search?: string) => {
+  const params = new URLSearchParams();
+  if (category) params.append("category", category);
+  if (search) params.append("search", search);
+
+  const res = await fetch(`${API_URL}/api/blogs?${params}`, {
     cache: "no-store",
   });
+
   return res.json();
 };
 
