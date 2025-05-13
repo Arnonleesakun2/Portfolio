@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ToastProvider } from "@/context/ToastContext";
 import ReduxProvider from "@/context/ReduxProvider";
+import Scroll from "@/components/motions/Scroll";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -17,7 +18,11 @@ export default function RootLayout({
     <html lang="en" data-theme="nord">
       <body suppressHydrationWarning={true}>
         <ReduxProvider>
-          <ToastProvider>{children}</ToastProvider>
+          <ToastProvider>
+            <main>
+              <Scroll /> {children}
+            </main>
+          </ToastProvider>
         </ReduxProvider>
       </body>
     </html>

@@ -8,6 +8,7 @@ import Input from "../form/Input";
 import Textarea from "../form/Textarea";
 import { Send } from "lucide-react";
 import { useForm } from "react-hook-form";
+import MotionMain from "../motions/MotionMain";
 
 type Contact = {
   email: string;
@@ -43,47 +44,49 @@ const Contactform = () => {
     }
   };
   return (
-    <div className="bg-base-100 p-8 rounded-xl shadow-lg border theme-border">
-      <h2 className="text-3xl font-semibold mb-6 text-highlight">
-        Send me a message
-      </h2>
-      <form onSubmit={handleSubmit(hdlSubmit)} className="space-y-4">
-        <Input
-          control={control}
-          errors={errors}
-          name="email"
-          label="Email"
-          type="email"
-        />
-        <Input
-          control={control}
-          errors={errors}
-          name="title"
-          label="Title"
-          type="text"
-        />
-        <Textarea
-          control={control}
-          errors={errors}
-          name="description"
-          label="Description"
-          type="text"
-        />
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="btn btn-primary w-full rounded-lg mt-4"
-        >
-          {isSubmitting ? (
-            <>Sending...</>
-          ) : (
-            <>
-              <Send size={18} /> Send
-            </>
-          )}
-        </button>
-      </form>
-    </div>
+    <MotionMain>
+      <div className="bg-base-100 p-8 rounded-xl shadow-lg border theme-border">
+        <h2 className="text-3xl font-semibold mb-6 text-highlight">
+          Send me a message
+        </h2>
+        <form onSubmit={handleSubmit(hdlSubmit)} className="space-y-4">
+          <Input
+            control={control}
+            errors={errors}
+            name="email"
+            label="Email"
+            type="email"
+          />
+          <Input
+            control={control}
+            errors={errors}
+            name="title"
+            label="Title"
+            type="text"
+          />
+          <Textarea
+            control={control}
+            errors={errors}
+            name="description"
+            label="Description"
+            type="text"
+          />
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="btn btn-primary w-full rounded-lg mt-4"
+          >
+            {isSubmitting ? (
+              <>Sending...</>
+            ) : (
+              <>
+                <Send size={18} /> Send
+              </>
+            )}
+          </button>
+        </form>
+      </div>
+    </MotionMain>
   );
 };
 export default Contactform;

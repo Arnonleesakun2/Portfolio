@@ -3,6 +3,13 @@
 @plugin "daisyui" {
   themes: all;
 }
+
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none; 
+}
 @layer utilities {
   :where([data-theme="nord"]) .theme-border {
     border-color: rgb(0 0 0 / 0.1); /* border-black/10 */
@@ -11,7 +18,17 @@
   :where([data-theme="black"]) .theme-border {
     border-color: rgb(255 255 255 / 0.2); /* border-white/20 */
   }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
+
 @layer components {
   .maincontainer {
     @apply mx-12;
@@ -23,6 +40,7 @@
     @apply bg-gradient-to-r from-pink-500 to-yellow-500;
   }
 }
+
 body {
   font-family: "Space Grotesk", sans-serif;
 }
