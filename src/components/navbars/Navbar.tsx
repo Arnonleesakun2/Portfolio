@@ -1,11 +1,9 @@
 import Link from "next/link";
 import React from "react";
 import { GalleryHorizontalEnd } from "lucide-react";
-import MotionMain from "../motions/MotionMain";
 
 const Navbar = () => {
   return (
-    <MotionMain>
       <div className="lg:w-[70%] w-[90%] mx-auto my-4 sticky top-[16px] z-50">
         <div className="navbar theme-border border rounded-4xl p-3 shadow-xl backdrop-blur-[10px]">
           <div className="navbar-start">
@@ -90,7 +88,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </MotionMain>
   );
 };
 
