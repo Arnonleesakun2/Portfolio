@@ -27,6 +27,10 @@ export const Framework = [
     level: "Proficient",
   },
   {
+    name: "Tailwind CSS",
+    level: "Proficient",
+  },
+  {
     name: "Node.js",
     level: "Intermediate",
   },
