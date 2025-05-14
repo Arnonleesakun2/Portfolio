@@ -21,8 +21,10 @@ const Blogpage = async ({
     <div className="flex flex-col lg:flex-row gap-8 py-10">
       <div className="lg:w-1/4">
         <div className="space-y-4 sticky top-32">
-          <Searchblog />
-          <Listcategory selected={category} />
+          <MotionMain>
+            <Searchblog />
+            <Listcategory selected={category} />
+          </MotionMain>
         </div>
       </div>
       <div className="lg:w-3/4">
