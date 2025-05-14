@@ -20,10 +20,12 @@ const Blogpage = async ({
   return (
     <div className="flex flex-col lg:flex-row gap-8 py-10 ">
       <div className="lg:w-1/4">
-        <div className="space-y-4 sticky top-32">
-          <Searchblog />
-          <Listcategory selected={category} />
-        </div>
+        <MotionMain>
+          <div className="space-y-4 sticky top-32">
+            <Searchblog />
+            <Listcategory selected={category} />
+          </div>
+        </MotionMain>
       </div>
       <div className="lg:w-3/4">
         <Listblog category={category} search={search} />
