@@ -5,8 +5,8 @@ import SignoutButton from "./SignoutButton";
 
 const AdminNavbar = () => {
   return (
-    <div className="lg:w-[70%] w-[90%] mx-auto my-4 sticky top-[16px] z-50">
-      <div className="navbar theme-border border rounded-4xl p-3 shadow-xl backdrop-blur-[10px]">
+    <div className="lg:w-[70%] w-[90%] mx-auto my-2 sticky top-[16px] z-50">
+      <div className="navbar theme-border border rounded-4xl px-4 shadow-xl backdrop-blur-[10px]">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -32,9 +32,6 @@ const AdminNavbar = () => {
               <li>
                 <Link href="/admin/blog">Blogs</Link>
               </li>
-              <li>
-                <Link href="/admin/todo">Todos</Link>
-              </li>
             </ul>
           </div>
           <Link
@@ -56,14 +53,6 @@ const AdminNavbar = () => {
                 className="rounded-4xl font-semibold btn-ghost"
               >
                 Blogs
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/admin/todo"
-                className="rounded-4xl font-semibold btn-ghost"
-              >
-                Todos
               </Link>
             </li>
           </ul>

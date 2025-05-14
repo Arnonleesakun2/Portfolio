@@ -38,7 +38,7 @@ const Cardblog = ({
             alt={title}
             fill
             quality={100}
-            className="object-cover sm:h-[200px]"
+            className="sm:h-[200px]"
             sizes="(max-width: 768px) 100vw, 33vw"
             priority
           />

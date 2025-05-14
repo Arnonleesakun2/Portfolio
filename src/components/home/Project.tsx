@@ -7,7 +7,7 @@ import MotionItem from "../motions/MotionItem";
 
 const Project = () => {
   return (
-    <div className="mt-[100px]">
+    <div className="my-10">
       <MotionMain>
         <div className="text-4xl text-highlight font-semibold">Projects</div>
       </MotionMain>

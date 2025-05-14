@@ -31,7 +31,7 @@
 
 @layer components {
   .maincontainer {
-    @apply mx-12;
+    @apply w-full max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 ;
   }
   .text-highlight {
     @apply bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent;

@@ -89,7 +89,7 @@ const BlogDetailPage = async ({ params }: Params) => {
           <h2 className="text-xl font-semibold mb-2">Summary</h2>
           <p>{blog.summary}</p>
         </div>
-        <div className="prose max-w-none">{blog.content}</div>
+        <div className="whitespace-pre-line leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.content }}></div>
       </MotionMain>
     </div>
   );

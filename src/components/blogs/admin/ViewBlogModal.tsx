@@ -88,7 +88,7 @@ const ViewBlogModal = ({ blog, isOpen, onClose }: ViewBlogModalProps) => {
             <div>
               <h3 className="p-4 text-lg font-semibold mb-2 rounded-lg">Content</h3>
               <div className="p-4 rounded-lg">
-                <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+                <div className="whitespace-pre-line leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.content }} />
               </div>
             </div>
           </div>

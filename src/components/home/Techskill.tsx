@@ -2,7 +2,7 @@ import { techskill } from "@/utils/techskill";
 import Image from "next/image";
 import MotionMain from "../motions/MotionMain";
 
-const Skill = () => {
+const Techskill = () => {
   return (
     <MotionMain>
       <div className="my-[70px]">
@@ -34,4 +34,4 @@ const Skill = () => {
     </MotionMain>
   );
 };
-export default Skill;
+export default Techskill;

@@ -1,7 +1,8 @@
-import About from "@/components/abouts/About";
-import Journey from "@/components/journeys/Journey";
-import Project from "@/components/projects/Project";
-import Skill from "@/components/skills/Skill";
+import About from "@/components/home/About";
+import Journey from "@/components/home/Journey";
+import Project from "@/components/home/Project";
+import Skill from "@/components/home/Skill";
+import Techskill from "@/components/home/Techskill";
 import React from "react";
 
 const Homepage = () => {
@@ -9,8 +10,9 @@ const Homepage = () => {
     <div >
       <About />
       <Journey />
+      <Skill/>
+      <Techskill />
       <Project />
-      <Skill />
     </div>
   );
 };

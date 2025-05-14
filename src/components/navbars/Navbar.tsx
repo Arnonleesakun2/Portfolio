@@ -4,8 +4,8 @@ import { GalleryHorizontalEnd } from "lucide-react";
 
 const Navbar = () => {
   return (
-      <div className="lg:w-[70%] w-[90%] mx-auto my-4 sticky top-[16px] z-50">
-        <div className="navbar theme-border border rounded-4xl p-3 shadow-xl backdrop-blur-[10px]">
+      <div className="lg:w-[70%] w-[90%] mx-auto my-2 sticky top-[16px] z-50">
+        <div className="navbar theme-border border rounded-4xl px-4 shadow-xl backdrop-blur-[10px]">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -36,9 +36,6 @@ const Navbar = () => {
                   <Link href="/blog">Blogs</Link>
                 </li>
                 <li>
-                  <Link href="/todo">Todos</Link>
-                </li>
-                <li>
                   <Link href="/contact">Contact</Link>
                 </li>
               </ul>
@@ -59,14 +56,6 @@ const Navbar = () => {
                   className="rounded-4xl font-semibold btn-ghost"
                 >
                   Blogs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/todo"
-                  className="rounded-4xl font-semibold btn-ghost"
-                >
-                  Todos
                 </Link>
               </li>
               <li>

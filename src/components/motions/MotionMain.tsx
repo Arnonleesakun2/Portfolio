@@ -15,7 +15,6 @@ const MotionMain = ({
         damping: 20,
         mass: 1,
         duration: 0.2,
-        delay: 0.5,
       }}
     >
       {children}

@@ -6,32 +6,32 @@ import MotionMain from "../motions/MotionMain";
 const Journey = () => {
   return (
     <MotionMain>
-    <div className="md:grid md:grid-cols-2 gap-10 items-center mt-[100px]">
+    <div className="md:grid md:grid-cols-2 gap-10 mt-[100px]">
       <div className="border p-5 rounded-xl border-black/10 hover:border-pink-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-pink-500/20">
         <div className="text-4xl text-highlight font-semibold">Experience</div>
-        <div className="space-y-6">
+        <div >
           {experince.map((item, index) => {
             return (
-              <div key={index} className="p-4 rounded-lg">
+              <div key={index} className="p-2 rounded-lg">
                 <div className="font-thai text-[22px] leading-[25px] font-semibold">
                   {item.position}
                 </div>
                 <div className="font-thai text-[20px] mt-1leading-[25px] font-medium">
                   {item.company}
                 </div>
-                <div className="mt-3">
+                <div>
                   {item.description.map((des, index) => {
                     return (
                       <div
                         key={index}
-                        className="font-thai mt-2 text-[17px] leading-[23px]"
+                        className="font-thai mt-1 text-[17px] leading-[23px]"
                       >
                         • {des}
                       </div>
                     );
                   })}
                 </div>
-                <div className="font-thai text-[16px] mt-4 text-pink-400 leading-[20px] font-medium">
+                <div className="font-thai text-[16px] mt-1 text-pink-400 leading-[20px] font-medium">
                   {item.date}
                 </div>
               </div>
@@ -43,10 +43,10 @@ const Journey = () => {
         <div>
           <div className="text-4xl text-highlight font-semibold">Education</div>
         </div>
-        <div className="space-y-6">
+        <div >
           {education.map((item, index) => {
             return (
-              <div key={index} className="p-4 rounded-lg">
+              <div key={index} className="p-2 rounded-lg">
                 <div className="font-thai text-[22px] leading-[25px] font-semibold">
                   {item.title}
                 </div>
