@@ -8,22 +8,25 @@
   scrollbar-width: none;
 }
 *::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 @layer utilities {
   :where([data-theme="nord"]) .theme-border {
     border-color: rgb(0 0 0 / 0.1); /* border-black/10 */
   }
-
   :where([data-theme="black"]) .theme-border {
     border-color: rgb(255 255 255 / 0.2); /* border-white/20 */
   }
-
+  :where([data-theme="nord"]) .blog-content {
+    border-color: rgb(0 0 0 / 0.1); /* border-black/10 */
+  }
+  :where([data-theme="black"]) .blog-content {
+    border-color: rgb(255 255 255 / 0.2); /* border-white/20 */
+  }
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE & Edge */
     scrollbar-width: none; /* Firefox */
   }
-
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
   }
@@ -31,7 +34,7 @@
 
 @layer components {
   .maincontainer {
-    @apply w-full max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 ;
+    @apply w-full max-w-6xl mx-auto px-6 sm:px-6 lg:px-8;
   }
   .text-highlight {
     @apply bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent;

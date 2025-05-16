@@ -11,7 +11,6 @@ const MotionItem = ({
       whileInView={{ y: 0, opacity: 1 }}
       transition={{
         duration: 0.2,
-        delay: 0.5,
         type: "spring",
         stiffness: 100,
       }}

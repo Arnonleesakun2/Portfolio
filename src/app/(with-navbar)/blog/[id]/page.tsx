@@ -4,6 +4,7 @@ import { Calendar, Tag, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MotionMain from "@/components/motions/MotionMain";
+import BlogContent from "@/components/blogs/user/BlogContent";
 
 type Params = {
   params: Promise<{ id: string }>;
@@ -40,6 +41,7 @@ const BlogDetailPage = async ({ params }: Params) => {
       day: "numeric",
     });
   };
+
   return (
     <div className="max-w-4xl mx-auto py-10 px-4">
       <MotionMain>
@@ -89,7 +91,10 @@ const BlogDetailPage = async ({ params }: Params) => {
           <h2 className="text-xl font-semibold mb-2">Summary</h2>
           <p>{blog.summary}</p>
         </div>
-        <div className="whitespace-pre-line leading-relaxed" dangerouslySetInnerHTML={{ __html: blog.content }}></div>
+
+        <div className="whitespace-pre-line leading-relaxed">
+          <BlogContent content={blog.content} />
+        </div>
       </MotionMain>
     </div>
   );
