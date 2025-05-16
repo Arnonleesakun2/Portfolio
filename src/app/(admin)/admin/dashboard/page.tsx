@@ -1,3 +1,4 @@
+import Stat from "@/components/dashboards/Stat";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,7 +8,9 @@ export const metadata: Metadata = {
 
 const Dashboardpage = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <Stat/>
+    </div>
   )
 }
 export default Dashboardpage
