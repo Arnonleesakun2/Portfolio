@@ -32,17 +32,6 @@ const Cardblog = ({
   return (
     <MotionItem>
       <div className="card sm:card-side rounded-4xl shadow-xl overflow-hidden border theme-border hover:shadow-2xl transition-all duration-300 h-full">
-        <figure className="sm:hidden w-full md:w-1/3 aspect-[4/3] relative">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            quality={100}
-            className="sm:h-[200px]"
-            sizes="(max-width: 768px) 100vw, 33vw"
-            priority
-          />
-        </figure>
         <div className="card-body flex flex-col justify-between md:w-2/3">
           <div>
             <div className="flex justify-between items-center mb-2">
