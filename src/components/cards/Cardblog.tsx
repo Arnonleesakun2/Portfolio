@@ -16,7 +16,6 @@ const Cardblog = ({
   title,
   summary,
   category,
-  image,
   createdAt,
 }: CardBlogProps) => {
   const formatDate = (dateString: string) => {
