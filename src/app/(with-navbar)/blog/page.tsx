@@ -18,9 +18,9 @@ const Blogpage = async ({
   const category = params.category || "";
   const search = params.search || "";
   return (
-    <div className="flex flex-col lg:flex-row gap-8 py-10">
+    <div className="maincontainer flex flex-col lg:flex-row gap-8 py-10 mt-30">
       <div className="lg:w-1/4">
-        <div className="space-y-4 sticky top-32">
+        <div className="space-y-4 sticky top-40">
           <MotionMain>
             <Searchblog />
             <Listcategory selected={category} />

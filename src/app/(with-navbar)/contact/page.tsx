@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const Contactpage = () => {
   return (
-    <div className="mt-20">
+    <div className="maincontainer mt-30">
       <div className="text-center">
         <Contactheader/>
       </div>

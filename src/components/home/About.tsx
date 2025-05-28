@@ -2,30 +2,21 @@ import Link from "next/link";
 import React from "react";
 import profile from "../../../public/img/profiles.png";
 import Image from "next/image";
-import { profile as profileData } from "@/utils/profile";
 import MotionMain from "../motions/MotionMain";
-import { ChevronDown, PanelsTopLeft, Database } from "lucide-react";
+import { PanelsTopLeft, Database } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="mt-8">
-      <MotionMain>
-        <div className="space-y-2">
-          <div className="text-center">เลื่อนลงเพื่อดูเพิ่มเติม</div>
-          <div className="flex justify-center animate-bounce">
-            <ChevronDown />
-          </div>
-        </div>
-      </MotionMain>
-      <div className="md:grid md:grid-cols-2 items-center gap-10">
+    <div className="bg-[#6D80C7] h-screen flex jutify-center items-center">
+      <div className="maincontainer md:grid md:grid-cols-2 items-center gap-10">
         <div className="">
           <MotionMain>
-            <div className="space-y-6">
+            <div className="space-y-3 text-gray-200">
               <div className="text-[75px] font-semibold leading-tight">
                 Hello I am
                 <span className="text-highlight"> Pop!</span>
               </div>
-              <div className="font-thai text-[19px] font-medium leading-relaxed max-w-[600px]">
+              <div className="text-[19px] font-medium leading-relaxed max-w-[600px]">
                 ผมเป็นจบใหม่สนใจในการทำเว็บไซต์ในสายงาน
                 <span className="text-highlight"> Fullstack Developer </span>
                 งานในด้าน <span className="text-highlight">Frontend</span> และ
@@ -33,33 +24,24 @@ const About = () => {
                 ผมตั้งใจจะสร้างผลงานใหม่ ๆ และพร้อมอย่างต่อเนื่อง
                 เลือกให้สามารถสร้างสรรค์ผลงาน และไปพร้อมในงานท้าทาย!
               </div>
-              <div className="flex gap-4 pt-4">
+              <div className="">
                 <Link
                   href="/files/resume.pdf"
                   target="_blank"
                   className="font-shortstack text-white"
                 >
-                  <div className="btn rounded-full bg-gradient-to-r from-pink-500 to-yellow-500 border-none text-white hover:opacity-90 transition-all shadow-md hover:shadow-lg">
+                  <div className="btn rounded-full bg-gradient-to-r from-[#FBBF24] to-orange-400 border-none text-white hover:opacity-90 transition-all shadow-md hover:shadow-lg">
                     View Resume
-                  </div>
-                </Link>
-                <Link
-                  href="/files/cv.pdf"
-                  target="_blank"
-                  className="font-shortstack"
-                >
-                  <div className="btn rounded-full bg-white border-2 border-gray-200 text-gray-700 hover:border-gray-300 transition-all shadow-sm hover:shadow-md">
-                    View CV
                   </div>
                 </Link>
               </div>
             </div>
           </MotionMain>
-          <div className="grid grid-cols-2 gap-4 mt-22">
+          <div className="grid grid-cols-2 gap-4 mt-4">
             <MotionMain>
-              <div className="border theme-border rounded-xl p-6 shadow-2xl">
-                <div className="flex flex-col justify-center items-center space-y-2">
-                  <div className="p-2 rounded-full bg-highlight ">
+              <div className="border border-white/20 hover:border-gray-300 transition-all duration-500 hover:shadow-lg hover:shadow-gray-300 backdrop-blur-md rounded-xl p-6 shadow-2xl">
+                <div className="flex flex-col justify-center items-center space-y-2 text-gray-200">
+                  <div className="p-2 rounded-full bg-highlight">
                     <PanelsTopLeft />
                   </div>
                   <h1 className="font-bold">Web Developer</h1>
@@ -70,8 +52,8 @@ const About = () => {
               </div>
             </MotionMain>
             <MotionMain>
-              <div className="border theme-border rounded-xl p-6 shadow-2xl">
-                <div className="flex flex-col justify-center items-center space-y-2">
+              <div className="border border-white/20 hover:border-gray-300 transition-all duration-500 hover:shadow-lg hover:shadow-gray-300 backdrop-blur-md rounded-xl p-6 shadow-2xl">
+                <div className="flex flex-col justify-center items-center space-y-2 text-gray-200">
                   <div className="p-2 rounded-full bg-highlight ">
                     <Database />
                   </div>
@@ -100,35 +82,16 @@ const About = () => {
                       className="object-cover object-center"
                     />
                   </div>
-                  <div className="border theme-border rounded-b-xl">
-                    <div className="py-8 px-8">
-                      <div className="text-[40px] font-bold mb-6 bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent flex items-center gap-3">
-                        <span>Profile</span>
-                        <div className="h-1 flex-grow bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full"></div>
-                      </div>
-                      <div className="space-y-2">
-                        {profileData.map((item, index) => {
-                          return (
-                            <div
-                              key={index}
-                              className="group flex items-center transition-all hover:translate-x-2 duration-300 border-b theme-border hover:border-pink-500/70"
-                            >
-                              <span className="text-white font-semibold min-w-[100px] bg-gradient-to-r from-pink-500/80 to-yellow-500/80 px-2 py-1 rounded-lg mr-4 shadow-md group-hover:shadow-pink-500/30 transition-all">
-                                {item.title}
-                              </span>
-                              <span className=" font-medium text-lg group-hover:text-pink-200 transition-colors duration-300">
-                                {item.data}
-                              </span>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="animate-bounce absolute z-10 left-0 top-[100px] font-shortstack py-3 px-5 bg-black text-white rounded-full shadow-lg">
-                Arnon Leesakun
+                Name: Arnon Leesakun
+              </div>
+              <div className="animate-bounce absolute z-10 left-0 top-[155px] font-shortstack py-3 px-5 bg-black text-white rounded-full shadow-lg">
+                Nickname: Pop
+              </div>
+              <div className="animate-bounce absolute z-10 left-0 top-[210px] font-shortstack py-3 px-5 bg-black text-white rounded-full shadow-lg">
+                Age: 23
               </div>
               <div className="animate-bounce absolute z-10 right-0 top-[300px] font-shortstack py-3 px-5 bg-black text-white rounded-full shadow-lg">
                 Thailand

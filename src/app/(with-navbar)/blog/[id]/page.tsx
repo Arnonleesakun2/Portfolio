@@ -4,7 +4,7 @@ import { Calendar, Tag, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import MotionMain from "@/components/motions/MotionMain";
-import BlogContent from "@/components/blogs/user/BlogContent";
+import MarkdownRenderer from "@/components/blogs/user/MarkdownRenderer";
 
 type Params = {
   params: Promise<{ id: string }>;
@@ -43,7 +43,7 @@ const BlogDetailPage = async ({ params }: Params) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-10 px-4">
+    <div className="max-w-4xl mx-auto py-10 px-4 mt-30">
       <MotionMain>
         <Link
           href="/blog"
@@ -93,7 +93,7 @@ const BlogDetailPage = async ({ params }: Params) => {
         </div>
 
         <div className="whitespace-pre-line leading-relaxed">
-          <BlogContent content={blog.content} />
+          <MarkdownRenderer content={blog.content} />
         </div>
       </MotionMain>
     </div>

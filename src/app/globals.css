@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: all;
-}
+@plugin "daisyui" ;
 
 * {
   scrollbar-width: none;
@@ -11,18 +9,6 @@
   display: none;
 }
 @layer utilities {
-  :where([data-theme="nord"]) .theme-border {
-    border-color: rgb(0 0 0 / 0.1); /* border-black/10 */
-  }
-  :where([data-theme="black"]) .theme-border {
-    border-color: rgb(255 255 255 / 0.2); /* border-white/20 */
-  }
-  :where([data-theme="nord"]) .blog-content {
-    border-color: rgb(0 0 0 / 0.1); /* border-black/10 */
-  }
-  :where([data-theme="black"]) .blog-content {
-    border-color: rgb(255 255 255 / 0.2); /* border-white/20 */
-  }
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE & Edge */
     scrollbar-width: none; /* Firefox */
@@ -37,10 +23,10 @@
     @apply w-full max-w-6xl mx-auto px-6 sm:px-6 lg:px-8;
   }
   .text-highlight {
-    @apply bg-gradient-to-r from-pink-500 to-yellow-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#FBBF24] to-orange-400 bg-clip-text text-transparent;
   }
   .bg-highlight {
-    @apply bg-gradient-to-r from-pink-500 to-yellow-500;
+    @apply bg-gradient-to-r from-[#FBBF24] to-orange-400;
   }
 }
 

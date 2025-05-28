@@ -1,4 +1,3 @@
-import Themechange from "@/components/themes/Themechange";
 
 export default function Authlayout({
   children,
@@ -8,7 +7,6 @@ export default function Authlayout({
   return (
     <div>
       {children}
-      <Themechange />
     </div>
   );
 }

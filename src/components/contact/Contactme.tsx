@@ -6,7 +6,7 @@ import MotionMain from "../motions/MotionMain";
 const Contactme = () => {
   return (
     <MotionMain>
-      <div className="bg-base-100 p-8 rounded-xl shadow-lg border theme-border">
+      <div className="bg-base-100 p-8 rounded-xl shadow-lg border">
         <h2 className="text-3xl font-semibold mb-6 text-highlight">Contact</h2>
         <div className="space-y-4">
           {contact.map((item, index) => (

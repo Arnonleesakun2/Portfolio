@@ -43,7 +43,7 @@ const Signinform = () => {
     }
   };
   return (
- <div className="border theme-border rounded-4xl w-96 bg-base-100 shadow-xl">
+ <div className="border border-black/20 rounded-4xl w-96 bg-base-100 shadow-xl">
         <div className="card-body">
           <h2 className="text-center text-4xl text-highlight font-semibold">
             Login

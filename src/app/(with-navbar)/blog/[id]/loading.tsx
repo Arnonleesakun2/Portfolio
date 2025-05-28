@@ -2,7 +2,7 @@ import { ArrowLeft, Calendar, Tag } from "lucide-react";
 
 export default function Loading() {
   return (
-    <div className="max-w-4xl mx-auto py-10 px-4 animate-pulse">
+    <div className="max-w-4xl mx-auto py-10 px-4 animate-pulse mt-30">
       <div className="flex items-center gap-2 mb-6">
         <ArrowLeft size={16} />
         <div className="h-4 w-32 bg-base-300 rounded"></div>

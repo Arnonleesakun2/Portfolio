@@ -1,6 +1,4 @@
-import Footer from "@/components/footers/Footer";
 import NavbarContainer from "@/components/navbars/NavbarContainer";
-import Themechange from "@/components/themes/Themechange";
 
 export default function WithNavbarLayout({
   children,
@@ -8,11 +6,9 @@ export default function WithNavbarLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="maincontainer">
+    <div>
       <NavbarContainer/>
       {children}
-      <Themechange />
-      <Footer/>
     </div>
   );
 }
